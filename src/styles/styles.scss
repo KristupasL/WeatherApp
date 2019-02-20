@@ -1,0 +1,188 @@
+@import 'base/normalize.scss';
+@import 'base/animate.scss';
+@font-face {
+  font-family: 'Brown-Regular';
+  src: url('fonts/Brown-Light.otf');
+}
+
+$grey-color: #f4f4f4;
+$acsent-color: #6200ff;
+$blue-color: #001eff;
+$karolinos-spalva: #1417ff;
+
+* {
+    font-family: 'Brown-Regular';
+}
+
+body {
+    background-color: $grey-color;
+}
+
+main {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    top: 10vh;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.head {
+    width: 350px;
+}
+
+h1 {
+    margin-right: 20px;
+    font-size: 45px;
+}
+
+h2 {
+    color: $karolinos-spalva;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+#city-input {
+    border: 0 solid black;
+    height: 0px;
+    font-size: 40px;
+    padding-bottom: 5px;
+    position: absolute;
+    margin-right: 5vw;
+    background-color: $grey-color;
+    color: $blue-color;
+    width: 50.35vw;
+    transition: height 1.5s;
+    padding-left: 10px;
+    z-index: 0;
+    bottom: 0px;
+}
+
+::placeholder {
+
+  color: grey;
+  opacity: 0.3;
+}
+
+#button {
+    height: 0px;
+    width: 200px;
+    border: 1px solid #001edd;
+    color: white;
+    background-color: #001eff;
+    border-radius: 45px;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.4s;
+    position: absolute;
+    align-self: center;
+    right: 5vw;
+    top: -77px;
+}
+
+img {
+    width: 0px;
+    padding-bottom: 0.5px;
+    transition: all 0.4s;
+}
+
+#button:hover img {
+    width: 13px;
+}
+
+
+
+.output {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: inline-block;
+    position: relative;
+    padding: 20px 0 10px 20px;
+    margin: 20px 20px 0 0;
+    background: white;
+    width: 23vw;
+    min-width: 200px;
+}
+
+#mini-icons {
+    width: 50px;
+}
+
+.linediv {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: white;
+    border: 0px;
+}
+
+.linediv:focus {
+    outline: none;
+}
+
+.line1, .line2 {
+    height: 3px;
+    width: 20px;
+    position: absolute;
+    background-color: $karolinos-spalva;
+    transition: all 0.5s;
+}
+
+.linediv:hover .line1{
+    transform: rotate(45deg);
+}
+
+.linediv:hover .line2{
+    transform: rotate(-45deg);
+}
+
+.placehold {
+    position: relative;
+    margin-top: 20vh;
+    font-size: 30px;
+    opacity: 0.3;
+    cursor: pointer;
+    width: 50.35vw;
+}
+
+.placehold p {
+    margin-bottom: 15px;
+}
+
+.magic-line {
+    border: 0.8px solid black;
+    width: 51vw;
+    position: relative;
+    top: 0;
+    transition: all 1.5s;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    #city-input {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    #button {
+        position: relative;
+        top: 3vh;
+        left: 10vw;
+    }
+}

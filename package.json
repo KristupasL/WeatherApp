@@ -1,0 +1,20 @@
+{
+  "name": "WeatherApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html --open",
+    "build": "parcel build src/index.html --out-dir public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0",
+    "sass": "^1.17.0"
+  },
+  "dependencies": {
+    "scripts": "^0.1.0"
+  }
+}
